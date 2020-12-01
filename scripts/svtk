@@ -27,6 +27,7 @@ usage: svtk [-h] <subcommand> [options]
 
 [ PE/SR analysis ]
     collect-pesr   Count clipped reads and extract discordant pairs genomewide.
+    collect-sr     Count clipped reads genomewide (PacBio CLR compatible)
     sr-test        Calculate enrichment of clipped reads at SV breakpoints.
     pe-test        Calculate enrichment of discordant pairs at SV breakpoints.
 

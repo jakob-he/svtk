@@ -6,6 +6,7 @@ from .bincov import main as bincov
 from .rdtest2vcf import main as rdtest2vcf
 from .resolve import main as resolve
 from .collect_pesr import main as collect_pesr
+from .collect_sr import main as collect_sr
 from .annotate import main as annotate
 from .utils import vcf2bed, remote_tabix
 from .pesr_test import pe_test, sr_test, count_pe, count_sr

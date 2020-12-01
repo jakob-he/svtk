@@ -9,7 +9,6 @@ cdef inline float float_min(float a, float b): return a if a <= b else b
 
 cpdef bint is_excluded(AlignedSegment read):
     cdef bint exclude = (read.is_unmapped or
-                         read.mate_is_unmapped or
                          read.is_secondary or
                          read.is_duplicate or
                          read.is_supplementary)
@@ -39,10 +38,10 @@ cpdef float overlap_frac(int startA, int endA, int startB, int endB):
 
     cdef int overlap_start = int_max(startA, startB)
     cdef int overlap_end = int_min(endA, endB)
-    
+
     cdef int overlap_size = overlap_end - overlap_start
     cdef int sizeA = endA - startA
-   
+
     cdef float frac
     if sizeA > 0:
         frac = overlap_size / sizeA
@@ -50,4 +49,3 @@ cpdef float overlap_frac(int startA, int endA, int startB, int endB):
         frac = 0
 
     return frac
-
